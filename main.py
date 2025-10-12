@@ -1,6 +1,6 @@
 from autonoleggio import Autonoleggio
 from datetime import datetime, date
-import sys
+
 
 def menu():                                                       # mostra il menu principale
     print("\n--- MENU AUTONOLEGGIO ---")
@@ -83,12 +83,17 @@ def main():                                                       # funzione pri
             except Exception as e:
                 print(f"Errore terminazione: {e}")
 
-        elif scelta == "7":                                       # uscita
-            print("Uscita dal programma...")
-            sys.exit(0)
 
-        else:                                                     # scelta non valida
+        elif scelta == "7":
+
+            print("Uscita dal programma...")
+
+            break
+
+        else:
+
             print("Opzione non valida!")
+
 
 if __name__ == "__main__":                                        # avvio programma
     main()
